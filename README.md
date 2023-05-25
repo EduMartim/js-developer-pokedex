@@ -1,6 +1,6 @@
 # Trilha JS Developer - Pokedex
 
-## Criação de uma página com os detalhos dos Pokemons
+## Criação de uma página com os detalhes dos Pokemons
 
 ## ✅ Ainda em construção, mas logo-logo eu termino
 
