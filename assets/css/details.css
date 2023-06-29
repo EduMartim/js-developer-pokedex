@@ -1,28 +1,144 @@
-.content {
-  max-width: 600px;
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 16px;
+  --gray-100: #efefef;
+  --gray-900: #25252b;
+  --white-900: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  color: #333;
+  background-color: var(--gray-100);
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 2rem;
   margin: 0 auto;
+}
+/*----------header----------*/
+.header {
+  background-color: var(--gray-900);
+  text-align: center;
+  height: 8rem;
+}
+
+.pokemon__logo {
+  width: 300px;
+}
+/*----------Pokebola----------*/
+.pokebola {
+  width: 300px;
+}
+
+.pokebola__image {
+  width: 100%;
+  cursor: pointer;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% / 0.5));
+}
+
+.pokebola__image:active {
+  animation: shake 0.1s;
+  animation-iteration-count: 200;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 10px;
+  }
+
+  50% {
+    margin-left: 0;
+  }
+
+  75% {
+    margin-left: -10px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+/*----------Pokestop----------*/
+.pokestop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  padding: 2rem 0;
+  min-height: calc(100vh - 8rem - 52px);
+}
+/*----------Pokemon----------*/
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  background: linear-gradient(45deg, #ffeb3b, #ff9800);
+  color: var(--white-900);
   padding: 1rem;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 100%;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% / 0.5));
 }
 
-h1 {
+.pokemon__wrapperImage {
+  width: 250px;
+  height: 250px;
+  background-color: var(--gray-100);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon__image {
+  width: 100%;
+  filter: drop-shadow(15px 15px 15px hsl(76deg 0% 0% / 0.5));
+}
+
+.pokemon__name {
+  text-transform: uppercase;
   text-align: center;
 }
 
-#pokemonDetails {
-  margin-top: 2rem;
+.pokemon__details {
+  text-transform: capitalize;
+  margin-left: 18px;
+  list-style: none;
 }
+/*----------Footer----------*/
 
-h2 {
+.footer {
+  background-color: var(--gray-900);
+  color: var(--white-900);
   text-align: center;
-}
-
-p {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 200px;
+  padding: 1rem 0;
+  height: 52px;
+  text-transform: uppercase;
 }

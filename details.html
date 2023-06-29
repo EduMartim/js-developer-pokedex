@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon Details</title>
-    <link rel="stylesheet" href="/assets/css/details.css" />
+    <link rel="icon" type="favicon" href="assets/pokeicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="assets/css/details.css" />
+    <script src="assets/js/details.js" defer></script>
   </head>
   <body>
-    <section class="content">
-      <h1>Pokemon Details</h1>
-
-      <div id="pokemonDetails">
-        <!-- Detalhes do Pokémon serão renderizados aqui -->
+    <header class="header">
+      <div class="container">
+        <img
+          src="assets/img/pokemon-logo.png"
+          class="pokemon__logo"
+          alt="logo pokemon"
+        />
       </div>
-    </section>
-
-    
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/details.js?v=1"></script>
-    <!--<script src="/assets/js/details.js"></script>-->
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="pokestop">
+          <div class="pokebola">
+            <img
+              src="assets/img/pokeball.png"
+              class="pokebola__image"
+              alt="pokebola, vermelha e branca"
+              onclick="getPokemon()"
+            />
+          </div>
+          <div class="pokemon">
+            <!-- 
+            ******tirando este HTML pois aqui será injetado o pokemon via JS******    
+            -->
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="pokemon__features"></div>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">
+          Desenvolvido por:
+          <a target="blank" href="https://github.com/EduMartim">EduMartim</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

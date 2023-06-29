@@ -86,17 +86,25 @@
     border-radius: 1rem;
 }
 
+.card-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
 .pokemon .number {
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: .725rem;
 }
 
 .pokemon .name {
     text-transform: capitalize;
     color: #fff;
-    margin-bottom: .25rem;
+    font-size: 1.3rem;
 }
 
 .pokemon .detail {
@@ -123,8 +131,8 @@
 }
 
 .pokemon .detail img {
-    max-width: 100%;
-    height: 70px;
+    max-width: 70%;
+    height: 150px;
 }
 
 .pagination {
